@@ -23,8 +23,8 @@ int main(int argc, char* argv[]){
 	fd2 = fopen(argv[2], "r");
 	
 
-	read_cheack(buf1, fd1);
-	read_cheack(buf2, fd2);
+	read_check(buf1, fd1);
+	read_check(buf2, fd2);
 
 	fst =  (uint32_t*)(buf1);
 	snd = (uint32_t*)(buf2);

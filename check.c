@@ -26,7 +26,7 @@ void file_check(int argc, char* argv[]){
 }
 
 
-void read_cheack(char* buf , FILE* fd){
+void read_check(char* buf , FILE* fd){
 
 
 	if(fread(buf ,1,  4,  fd) <4)
