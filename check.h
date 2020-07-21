@@ -5,5 +5,5 @@
 
 
 void file_check(int argc, char* argv[]);
-void read_check(char* buf , FILE* fd);
+void read_check(char* buf , char* fname);
 

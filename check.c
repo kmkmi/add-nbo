@@ -3,7 +3,7 @@
 
 void file_check(int argc, char* argv[]){
 
-    if ( argc < 3 ) {
+    if ( argc != 3 ) {
 		printf("Usage : %s <filename1> <filename2> \n", argv[0]);
             exit(1);
 
@@ -26,7 +26,12 @@ void file_check(int argc, char* argv[]){
 }
 
 
-void read_check(char* buf , FILE* fd){
+void read_check(char* buf , char* fname){
+
+	FILE *fd;
+
+
+    fd = fopen(fname, "r");
 
 
 	if(fread(buf ,1,  4,  fd) <4)
@@ -35,6 +40,8 @@ void read_check(char* buf , FILE* fd){
 			printf("File1 reading failure");
 			exit(1);			
 		}
+
+    fclose(fd);
 
 
 }
