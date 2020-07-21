@@ -17,12 +17,10 @@ int main(int argc, char* argv[]){
 	file_check(argc, argv);
 
 
-	
-
 	read_check(buf,  argv[1]);
-	read_check(buf,  argv[2]);
-
 	fst = ntohl(*((uint32_t*)buf));
+
+	read_check(buf,  argv[2]);
 	snd = ntohl(*((uint32_t*)buf));
 
 	printf("%d(%#x)  +   %d(%#x)   =   %d(%#x)\n", 
